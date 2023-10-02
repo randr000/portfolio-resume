@@ -32,7 +32,7 @@ const FooterDetails = () => {
 
             <p className={pClasses} style={pStyles}>
                 For more information about how this page was built, please see
-                the <a href="" target="_blank">README</a>.
+                the <a href="https://github.com/randr000/portfolio-resume" target="_blank">README</a>.
             </p>
         </div>
     );
