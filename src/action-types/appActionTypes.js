@@ -1,0 +1,6 @@
+const APP_ACTION_TYPES = {
+    ACCOUNTING: 'ACCOUNTING',
+    TECH: 'TECH'
+};
+
+export default APP_ACTION_TYPES;

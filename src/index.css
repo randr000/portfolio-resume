@@ -1,3 +1,8 @@
+:root {
+  --gray: #333B4C;
+  --google-font: 'Nunito Sans', sans-serif;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +15,55 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#hr-main-style {
+  border: .25rem solid #333B4C;
+}
+
+.background-gray {
+  background-color: var(--gray);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.google-font-400 {
+  font-family: var(--google-font-fam);
+  font-weight: 400;
+}
+
+.google-font-500 {
+  font-family: var(--google-font-fam);
+  font-weight: 500;
+}
+
+.google-font-600 {
+  font-family: var(--google-font-fam);
+  font-weight: 600;
+}
+
+.google-font-700 {
+  font-family: var(--google-font-fam);
+  font-weight: 700;
+}
+
+.google-font-800 {
+  font-family: var(--google-font-fam);
+  font-weight: 800;
+}
+
+.google-font-900 {
+  font-family: var(--google-font-fam);
+  font-weight: 900;
+}
+
+.google-font-1000 {
+  font-family: var(--google-font-fam);
+  font-weight: 1000;
 }
