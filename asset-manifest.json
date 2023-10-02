@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/portfolio-resume/static/css/main.0b4d6537.css",
+    "main.js": "/portfolio-resume/static/js/main.c83192a1.js",
+    "static/js/787.dc9ee2bf.chunk.js": "/portfolio-resume/static/js/787.dc9ee2bf.chunk.js",
+    "static/media/pyodide.gif": "/portfolio-resume/static/media/pyodide.c7ef8dfbfc92eb43665f.gif",
+    "static/media/Sql_logo.png": "/portfolio-resume/static/media/Sql_logo.85fb38d6773862e917f4.png",
+    "static/media/aws-certified-cloud-practitioner.png": "/portfolio-resume/static/media/aws-certified-cloud-practitioner.35992e9a90a185e95505.png",
+    "static/media/bootstrap-logo.svg.png": "/portfolio-resume/static/media/bootstrap-logo.svg.6d958c3288868f30e7f2.png",
+    "static/media/fiu-logo.webp": "/portfolio-resume/static/media/fiu-logo.2d84220a611a9c7b7e28.webp",
+    "static/media/Jupyter-logo.png": "/portfolio-resume/static/media/Jupyter-logo.2d761e6680d3cfbac157.png",
+    "static/media/vba.png": "/portfolio-resume/static/media/vba.ac0b54c826226b8d245b.png",
+    "static/media/PeopleSoft.png": "/portfolio-resume/static/media/PeopleSoft.0275aa180e07b6c4b1f7.png",
+    "static/media/headshot-accounting.jpg": "/portfolio-resume/static/media/headshot-accounting.d5f60b1ec96019f2a9af.jpg",
+    "static/media/cpa.jpg": "/portfolio-resume/static/media/cpa.4bf2bc9506b9b0e41069.jpg",
+    "static/media/lift-log.png": "/portfolio-resume/static/media/lift-log.20dee23aadb599720d8b.png",
+    "static/media/4geeks-logo.webp": "/portfolio-resume/static/media/4geeks-logo.93e9dd6f67e7ea03a049.webp",
+    "static/media/python_icon.svg": "/portfolio-resume/static/media/python_icon.ccb02d1e2038612afcaaa381b5b1fe4f.svg",
+    "static/media/react-logo.svg": "/portfolio-resume/static/media/react-logo.f1484e295933af0e748d6a01b05a8361.svg",
+    "static/media/excel-logo.svg": "/portfolio-resume/static/media/excel-logo.ae061ff55c9f8a9ae203e5ce998cf32b.svg",
+    "static/media/access-logo.svg": "/portfolio-resume/static/media/access-logo.2fd08ad9162f223daa708d1790ef29e7.svg",
+    "static/media/word-logo.svg": "/portfolio-resume/static/media/word-logo.88dd14ada168cbe336e329e0e70a5dc6.svg",
+    "static/media/linkedin.svg": "/portfolio-resume/static/media/linkedin.27d111b78d11dfc86499ac8878b75e8b.svg",
+    "index.html": "/portfolio-resume/index.html",
+    "static/media/github-logo.svg": "/portfolio-resume/static/media/github-logo.8d660aea3cc64aeb90e6078a7a48dce2.svg",
+    "static/media/js-logo.svg": "/portfolio-resume/static/media/js-logo.45687a3d83053bd27bac35627e904d53.svg",
+    "static/media/css-logo.svg": "/portfolio-resume/static/media/css-logo.74d7bcc15b667f1b98e7c0170080357e.svg",
+    "static/media/html5.svg": "/portfolio-resume/static/media/html5.2b2e078a005e3b67d05cd71b6b2b0f7f.svg",
+    "main.0b4d6537.css.map": "/portfolio-resume/static/css/main.0b4d6537.css.map",
+    "main.c83192a1.js.map": "/portfolio-resume/static/js/main.c83192a1.js.map",
+    "787.dc9ee2bf.chunk.js.map": "/portfolio-resume/static/js/787.dc9ee2bf.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0b4d6537.css",
+    "static/js/main.c83192a1.js"
+  ]
+}
