@@ -45,43 +45,40 @@ function App() {
   return (
     <div className="App">
       <AppContext.Provider value={{appState: appState, dispatch: dispatch}}>
-          <Container fluid>
-            <Row className="vh-100">
-              <Col xs={12} md={3} className="background-gray text-white google-font-800">
-                <Image src={headshotAccounting} alt="headshot" className="my-1 p-lg-3 p-1 mx-auto d-block" fluid roundedCircle/>
-                <ButtonGroup className="mb-4 d-flex">
-                  <Button variant="secondary" className="border" onClick={handleTechClick}>Tech</Button>
-                  <Button variant="secondary" className="border" onClick={handleAccountingClick}>Accounting</Button>
-                </ButtonGroup>
-                {isSmallScreen && <HeaderInfo/>}
-          
-                <div className="d-flex flex-row justify-content-center">
-                  <LinkedInLogoLink/>
-                  {tech && <GitHubLogoLink/>}
-                </div>
-                <hr/>
-                <h1 className={sideSectionTitleTheme}>Certifications</h1>
-                <div className="d-flex flex-row justify-content-center">
-                  <AWSCloudPracLogoLink/>
-                  {accounting && <CPALogoLink/>}
-                </div>
-                {tech && <TechSkills theme={sideSectionTitleTheme}/>}
-                {accounting && <AccountingSkills theme={sideSectionTitleTheme}/>}
-                <EducationSummary titleTheme={sideSectionTitleTheme} textTheme={sideSectionDetailTextTheme}/>
-                <LanguagesSection titleTheme={sideSectionTitleTheme} textTheme={sideSectionDetailTextTheme}/>
-              </Col>
-              <Col xs={12} md={9} className="text-gray google-font-800 fs-5">
-                {!isSmallScreen && <HeaderInfo/>}
-                {accounting && <AccountingDetails/>}
-                {tech && <TechDetails/>}
-                <FooterDetails/>
-              </Col>
-            </Row>
-          </Container>
-        <div className="bg-success me-2 mb-2" style={{position: "fixed", zIndex: 100,  right: 0, bottom: 0}}>
-            <Chatbot/>
-        </div>
+        <Chatbot/>
+        <Container fluid>
+          <Row className="vh-100">
+            <Col xs={12} md={3} className="background-gray text-white google-font-800">
+              <Image src={headshotAccounting} alt="headshot" className="my-1 p-lg-3 p-1 mx-auto d-block" fluid roundedCircle/>
+              <ButtonGroup className="mb-4 d-flex">
+                <Button variant="secondary" className="border" onClick={handleTechClick}>Tech</Button>
+                <Button variant="secondary" className="border" onClick={handleAccountingClick}>Accounting</Button>
+              </ButtonGroup>
+              {isSmallScreen && <HeaderInfo/>}
         
+              <div className="d-flex flex-row justify-content-center">
+                <LinkedInLogoLink/>
+                {tech && <GitHubLogoLink/>}
+              </div>
+              <hr/>
+              <h1 className={sideSectionTitleTheme}>Certifications</h1>
+              <div className="d-flex flex-row justify-content-center">
+                <AWSCloudPracLogoLink/>
+                {accounting && <CPALogoLink/>}
+              </div>
+              {tech && <TechSkills theme={sideSectionTitleTheme}/>}
+              {accounting && <AccountingSkills theme={sideSectionTitleTheme}/>}
+              <EducationSummary titleTheme={sideSectionTitleTheme} textTheme={sideSectionDetailTextTheme}/>
+              <LanguagesSection titleTheme={sideSectionTitleTheme} textTheme={sideSectionDetailTextTheme}/>
+            </Col>
+            <Col xs={12} md={9} className="text-gray google-font-800 fs-5">
+              {!isSmallScreen && <HeaderInfo/>}
+              {accounting && <AccountingDetails/>}
+              {tech && <TechDetails/>}
+              <FooterDetails/>
+            </Col>
+          </Row>
+        </Container>
       </AppContext.Provider>
       
     </div>

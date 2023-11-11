@@ -20,7 +20,7 @@ const Chatbot = () => {
     };
 
     return (
-        
+        <div className="bg-white me-2 mb-2" style={{position: "fixed", zIndex: 100,  right: 0, bottom: 0}}>
             <div className="container-fluid">
               <div className="chat-container">
                 <div className="chat-box">
@@ -47,7 +47,7 @@ const Chatbot = () => {
                 </div>
               </div>
             </div>
-        
+        </div>
       );
     };
 
