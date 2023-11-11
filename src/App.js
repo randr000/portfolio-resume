@@ -20,6 +20,7 @@ import LanguagesSection from './components/LanguagesSection';
 import AccountingDetails from './components/AccountingDetails';
 import TechDetails from './components/TechDetails';
 import FooterDetails from './components/FooterDetails';
+import Chatbot from './components/chatbot/Chatbot';
 
 
 function App() {
@@ -85,6 +86,7 @@ function App() {
               <FooterDetails/>
             </Col>
           </Row>
+          <Chatbot/>
         </Container>
       </AppContext.Provider>
     </div>
