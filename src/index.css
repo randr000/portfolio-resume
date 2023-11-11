@@ -67,3 +67,31 @@ code {
   font-family: var(--google-font-fam);
   font-weight: 1000;
 }
+
+/*Chat GPT*/
+.chat-container {
+  max-width: 400px;
+  /* margin: auto; */
+}
+
+.chat-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.message {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.user {
+  background-color: #d3f4ea;
+  text-align: right;
+}
+
+.bot {
+  background-color: #f0f0f0;
+  text-align: left;
+}
