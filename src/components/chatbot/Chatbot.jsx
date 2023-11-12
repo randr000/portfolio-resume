@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Form, Button, Card, Container } from 'react-bootstrap';
+import { Form, Button, Card } from 'react-bootstrap';
 import BIChatLeftDots from '../bootstrap-icons/BIChatLeftDots'
 import BIRobot from '../bootstrap-icons/BIRobot'
 
