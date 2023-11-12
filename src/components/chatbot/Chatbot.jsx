@@ -1,10 +1,22 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 const Chatbot = () => {
 
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+      scrollToBottom();
+    }, [messages]);
+
+    function scrollToBottom() {
+      if (containerRef.current) {
+        const container = containerRef.current;
+        container.scrollTop = container.scrollHeight;
+      }
+    }
 
     function handleInputChange(event) {
         setNewMessage(event.target.value);
@@ -29,7 +41,7 @@ const Chatbot = () => {
         <div className="bg-white me-2 mb-2" style={{position: "fixed", zIndex: 100,  right: 0, bottom: 0}}>
             <div className="container-fluid">
               <div className="chat-container">
-                <div className="chat-box">
+                <div ref={containerRef} className="chat-box">
                   {messages.map((message, index) => (
                     !message.loading ?
                       <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
