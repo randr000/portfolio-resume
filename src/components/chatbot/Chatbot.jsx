@@ -1,23 +1,29 @@
 import React, { useState } from 'react';
+import { Form, Button } from 'react-bootstrap';
 
 const Chatbot = () => {
 
     const [messages, setMessages] = useState([]);
     const [newMessage, setNewMessage] = useState('');
 
-    const handleInputChange = (e) => {
-        setNewMessage(e.target.value);
-    };
+    function handleInputChange(event) {
+        setNewMessage(event.target.value);
+    }
 
-    const handleSendMessage = () => {
+    function handleSubmit(event) {
+      event.preventDefault();
+      handleSendMessage();
+    }
+
+    function handleSendMessage() {
         if (newMessage.trim() !== '') {
-        setMessages([...messages, { text: newMessage, sender: 'user' }]);
+        setMessages([...messages, { text: newMessage, sender: 'user', loading: false }, { text: 'response', sender: 'bot', loading: true }]);
         // For a real chatbot, you would send the user's message to a server for processing
         // and get the bot's response back.
         // For simplicity, we're just adding the user's message to the state here.
         setNewMessage('');
         }
-    };
+    }
 
     return (
         <div className="bg-white me-2 mb-2" style={{position: "fixed", zIndex: 100,  right: 0, bottom: 0}}>
@@ -25,26 +31,34 @@ const Chatbot = () => {
               <div className="chat-container">
                 <div className="chat-box">
                   {messages.map((message, index) => (
-                    <div key={index} className={`message ${message.sender}`}>
-                      {message.text}
-                    </div>
+                    !message.loading ?
+                      <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
+                        {message.text}
+                      </div> :
+                      <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
+                        {/* <div className="message-container is-typing">
+                          <div className="message-bubble"></div>
+                        </div> */}
+                        <div className="d-flex flex-row">
+                          <div className="message-bubble animation-delay-1 bg-secondary"></div>
+                          <div className="message-bubble animation-delay-2 bg-secondary"></div>
+                          <div className="message-bubble animation-delay-3 bg-secondary"></div>
+                        </div>
+                      </div>
                   ))}
                 </div>
-                <div className="input-group mt-3">
-                  <input
+
+                <Form className="input-group mt-3" onSubmit={(e) => handleSubmit(e)}>
+                  <Form.Control
                     type="text"
                     className="form-control"
                     placeholder="Type your message..."
                     value={newMessage}
                     onChange={handleInputChange}
                   />
-                  <button
-                    className="btn btn-primary"
-                    onClick={handleSendMessage}
-                  >
-                    Send
-                  </button>
-                </div>
+                  <Button type="submit" variant="primary">Send</Button>
+                </Form>
+
               </div>
             </div>
         </div>
