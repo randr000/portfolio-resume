@@ -73,7 +73,11 @@ code {
 .chat-box {
   border: 1px solid #ccc;
   padding: 10px;
-  height: 22rem;
+  /* max-height: 22rem; */
+  /* min-height: 18rem; */
+  /* max-height: 95%; */
+  min-height: 30dvh;
+  max-height: 50dvh;
   overflow-y: scroll;
 }
 
