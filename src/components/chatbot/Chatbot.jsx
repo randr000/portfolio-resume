@@ -36,9 +36,6 @@ const Chatbot = () => {
                         {message.text}
                       </div> :
                       <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
-                        {/* <div className="message-container is-typing">
-                          <div className="message-bubble"></div>
-                        </div> */}
                         <div className="d-flex flex-row">
                           <div className="message-bubble animation-delay-1 bg-secondary"></div>
                           <div className="message-bubble animation-delay-2 bg-secondary"></div>
