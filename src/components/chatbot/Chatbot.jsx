@@ -50,9 +50,9 @@ const Chatbot = () => {
               showChat ?
               <Card className="bg-white">
                   <Card.Header className="bg-primary text-white">
-                    <div className="d-flex justify-content-between" onClick={handleToggleChat}>
+                    <div className="d-flex justify-content-between">
                       <p className="h3 google-font-600 my-auto">Raul AI</p>
-                      <p className="h3 google-font-1000 pb-3" style={{cursor: "pointer"}}>_</p>
+                      <p className="h3 google-font-1000 pb-3" style={{cursor: "pointer"}} onClick={handleToggleChat}>_</p>
                     </div>
                   </Card.Header>
                   <Card.Body>
