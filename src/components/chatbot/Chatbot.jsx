@@ -5,12 +5,28 @@ import BIRobot from '../bootstrap-icons/BIRobot'
 
 const Chatbot = () => {
 
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([{text: 'Welcome to Raul AI!', sender: 'bot', loading: false}]);
     const [showChat, setShowChat] = useState(false);
     const [newMessage, setNewMessage] = useState('');
     const containerRef = useRef(null);
 
     useEffect(() => {
+      const lastIndex = messages.length - 1
+      if (messages[lastIndex].loading) {
+        fetch("http://127.0.0.1:5000/api/predict", {
+          method: 'POST',
+          body: JSON.stringify({message: newMessage}),
+          mode: 'cors',
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+        .then(r => r.json())
+        .then(r => {
+          setMessages(state => [...state.slice(0, -1), {text: r.answer, sender: 'bot', loading: false}]);
+          setNewMessage('');
+        });
+      }
       scrollToBottom();
     }, [messages]);
 
@@ -40,7 +56,7 @@ const Chatbot = () => {
         // For a real chatbot, you would send the user's message to a server for processing
         // and get the bot's response back.
         // For simplicity, we're just adding the user's message to the state here.
-        setNewMessage('');
+        // setNewMessage('');
         }
     }
 
