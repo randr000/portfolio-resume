@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Form, Button, Card } from 'react-bootstrap';
-import BIChatLeftDots from '../bootstrap-icons/BIChatLeftDots'
-import BIRobot from '../bootstrap-icons/BIRobot'
+import BIChatLeftDots from '../bootstrap-icons/BIChatLeftDots';
+import BIRobot from '../bootstrap-icons/BIRobot';
+import parse from 'html-react-parser';
 
 const Chatbot = () => {
 
@@ -13,6 +14,7 @@ const Chatbot = () => {
     useEffect(() => {
       const lastIndex = messages.length - 1
       if (messages[lastIndex].loading) {
+        // fetch("http://132.145.169.110:5000/api/predict", {
         fetch("http://127.0.0.1:5000/api/predict", {
           method: 'POST',
           body: JSON.stringify({message: newMessage}),
@@ -76,7 +78,7 @@ const Chatbot = () => {
                           {messages.map((message, index) => (
                             !message.loading ?
                               <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
-                                {message.text}
+                                {parse(message.text)}
                               </div> :
                               <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
                                 <div className="d-flex align-items-center">
