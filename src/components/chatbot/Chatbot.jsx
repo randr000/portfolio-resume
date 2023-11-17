@@ -55,10 +55,6 @@ const Chatbot = () => {
     function handleSendMessage() {
         if (newMessage.trim() !== '') {
         setMessages([...messages, { text: newMessage, sender: 'user', loading: false }, { text: 'response', sender: 'bot', loading: true }]);
-        // For a real chatbot, you would send the user's message to a server for processing
-        // and get the bot's response back.
-        // For simplicity, we're just adding the user's message to the state here.
-        // setNewMessage('');
         }
     }
 
