@@ -6,7 +6,11 @@ import parse from 'html-react-parser';
 
 const Chatbot = () => {
 
-    const [messages, setMessages] = useState([{text: 'Welcome to Raul AI!', sender: 'bot', loading: false}]);
+    const [messages, setMessages] = useState([{text: [
+      'Welcome to Raul AI!',
+      'You can ask me a question by typing in the box next to the send button below.'
+    ], sender: 'bot', loading: false}]);
+
     const [showChat, setShowChat] = useState(false);
     const [newMessage, setNewMessage] = useState('');
     const containerRef = useRef(null);
@@ -54,7 +58,7 @@ const Chatbot = () => {
 
     function handleSendMessage() {
         if (newMessage.trim() !== '') {
-        setMessages([...messages, { text: newMessage, sender: 'user', loading: false }, { text: 'response', sender: 'bot', loading: true }]);
+        setMessages([...messages, { text: [newMessage], sender: 'user', loading: false }, { text: ['Raul AI is typing...'], sender: 'bot', loading: true }]);
         }
     }
 
@@ -73,8 +77,12 @@ const Chatbot = () => {
                         <div ref={containerRef} className="chat-box rounded">
                           {messages.map((message, index) => (
                             !message.loading ?
-                              <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
-                                {parse(message.text)}
+                              <div key={index}>
+                                {message.text.map((sentence, index) => (
+                                  <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
+                                    {parse(sentence)}
+                                  </div>
+                                ))}
                               </div> :
                               <div key={index} className={`message ${message.sender} w-75 rounded m${message.sender == 'bot' ? 'e' : 's'}-auto`}>
                                 <div className="d-flex align-items-center">
@@ -82,7 +90,7 @@ const Chatbot = () => {
                                   <div className="message-bubble animation-delay-2 bg-secondary"></div>
                                   <div className="message-bubble animation-delay-3 bg-secondary"></div>
                                 </div>
-                                <p className="">Raul AI is typing...</p>
+                                <p className="">{message.text[0]}</p>
                               </div>
                           ))}
                         </div>
