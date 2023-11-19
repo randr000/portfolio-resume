@@ -11,9 +11,12 @@ const Chatbot = () => {
       'You can ask me a question by typing in the box next to the send button below.'
     ], sender: 'bot', loading: false}]);
 
-    const [showChat, setShowChat] = useState(false);
+    const [showChat, setShowChat] = useState(true);
     const [newMessage, setNewMessage] = useState('');
     const containerRef = useRef(null);
+
+    const chatbotContainerStyles = {position: "fixed", zIndex: 100,  right: 0, bottom: 0};
+    const toggleChatCursorStyle = {cursor: "pointer"};
 
     useEffect(() => {
       const lastIndex = messages.length - 1
@@ -63,14 +66,15 @@ const Chatbot = () => {
     }
 
     return (
-          <div className="me-1 mb-1 me-lg-3 mb-lg-2 col-xs-12 col-sm-12 col-lg-6" style={{position: "fixed", zIndex: 100,  right: 0, bottom: 0}}>
-            {
-              showChat ?
+        <>
+          {
+            showChat ?
+            <div className="me-1 mb-1 me-lg-3 mb-lg-2 col-xs-12 col-sm-12 col-lg-6" style={chatbotContainerStyles}>
               <Card className="bg-white">
                   <Card.Header className="bg-primary text-white">
                     <div className="d-flex justify-content-between">
                       <p className="h3 google-font-600 my-auto">Raul AI</p>
-                      <p className="h3 google-font-1000 pb-3" style={{cursor: "pointer"}} onClick={handleToggleChat}>_</p>
+                      <p className="h3 google-font-1000 pb-3" style={toggleChatCursorStyle} onClick={handleToggleChat}>_</p>
                     </div>
                   </Card.Header>
                   <Card.Body>
@@ -105,17 +109,18 @@ const Chatbot = () => {
                           <Button type="submit" variant="primary">Send</Button>
                         </Form>
                   </Card.Body>
-              </Card> :
-              <div className="d-flex text-primary justify-content-end pe-1" onClick={handleToggleChat} style={{cursor: "pointer"}}>
-                <div className="mt-3">
-                  <BIRobot/>
-                </div>
-                <div className="mb-2">
-                  <BIChatLeftDots style={{width: "100px", height: "100px"}}/>
-                </div>
+              </Card>
+            </div> :
+            <div className="d-flex text-primary justify-content-end me-2 mb-2" style={chatbotContainerStyles}>
+              <div className="mt-3" onClick={handleToggleChat} style={toggleChatCursorStyle}>
+                <BIRobot/>
               </div>
-            }
-          </div>
+              <div onClick={handleToggleChat} style={toggleChatCursorStyle}>
+                <BIChatLeftDots style={{width: "100px", height: "100px"}}/>
+              </div>
+            </div>
+          }
+        </>
       );
     };
 
