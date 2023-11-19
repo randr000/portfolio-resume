@@ -10,6 +10,7 @@ const {LOCAL, PRODUCTION} = API_ENDPOINTS;
 const Chatbot = () => {
 
     const botName = 'Raul AI';
+    const helpEmail = 'rauljandrial@gmail.com';
 
     const [messages, setMessages] = useState([{text: [
       'Welcome to Raul AI!',
@@ -26,19 +27,36 @@ const Chatbot = () => {
     useEffect(() => {
       const lastIndex = messages.length - 1
       if (messages[lastIndex].loading) {
-        fetch(process.env.REACT_APP_CHATBOT_ENDPOINT == PRODUCTION.name ? PRODUCTION.endpoint : LOCAL.endpoint, {
-          method: 'POST',
-          body: JSON.stringify({message: newMessage}),
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        })
-        .then(r => r.json())
-        .then(r => {
-          setMessages(state => [...state.slice(0, -1), {text: r.answer, sender: 'bot', loading: false}]);
-          setNewMessage('');
-        });
+        const maxAttempts = 10;
+
+        for (let i = 0; i <= maxAttempts; i++) {
+          
+            fetch(process.env.REACT_APP_CHATBOT_ENDPOINT == PRODUCTION.name ? PRODUCTION.endpoint : LOCAL.endpoint, {
+              method: 'POST',
+              body: JSON.stringify({message: newMessage}),
+              mode: 'cors',
+              headers: {
+                'Content-Type': 'application/json'
+              }
+            })
+            .then(r => r.json())
+            .then(r => {
+              setMessages(state => [...state.slice(0, -1), {text: r.answer, sender: 'bot', loading: false}]);
+              setNewMessage('');
+              i = maxAttempts + 1;
+            })
+            .catch(r => {
+              if (i === maxAttempts) {
+                setMessages(state => [...state.slice(0, -1), { text: [
+                  'Hmm...',
+                  "I'm having trouble processing your request right now.",
+                  'Please try again later.',
+                  `If the problem persists, please take a screenshot and send an email to <a href="mailto:${helpEmail}?subject=${botName} No Response">${helpEmail}</a>.`
+                ], sender: 'bot', loading: false }]);
+              } else console.log(`Attempt ${i + 1} failed.`);
+            });
+        }
+
       }
       scrollToBottom();
     }, [messages]);
