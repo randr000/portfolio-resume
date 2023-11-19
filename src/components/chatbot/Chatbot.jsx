@@ -14,7 +14,7 @@ const Chatbot = () => {
       'You can ask me a question by typing in the box next to the send button below.'
     ], sender: 'bot', loading: false}]);
 
-    const [showChat, setShowChat] = useState(true);
+    const [showChat, setShowChat] = useState(false);
     const [newMessage, setNewMessage] = useState('');
     const containerRef = useRef(null);
 
