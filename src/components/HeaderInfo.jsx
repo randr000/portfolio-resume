@@ -16,7 +16,7 @@ const HeaderInfo = () => {
 
     const name = 'Raul J. Andrial';
     const accountingTitle = 'Revenue Accounting Manager';
-    const techTitle = 'Web Developer';
+    const techTitle = 'Full-Stack Software Engineer';
     const location = 'Miami, FL, USA';
 
     return (

@@ -3,6 +3,9 @@ import { Form, Button, Card } from 'react-bootstrap';
 import BIChatLeftDots from '../bootstrap-icons/BIChatLeftDots';
 import BIRobot from '../bootstrap-icons/BIRobot';
 import parse from 'html-react-parser';
+import { API_ENDPOINTS } from '../../constants';
+
+const {LOCAL, PRODUCTION} = API_ENDPOINTS;
 
 const Chatbot = () => {
 
@@ -21,8 +24,7 @@ const Chatbot = () => {
     useEffect(() => {
       const lastIndex = messages.length - 1
       if (messages[lastIndex].loading) {
-        // fetch("http://132.145.169.110:5000/api/predict", {
-        fetch("http://127.0.0.1:5000/api/predict", {
+        fetch(process.env.REACT_APP_CHATBOT_ENDPOINT == PRODUCTION.name ? PRODUCTION.endpoint : LOCAL.endpoint, {
           method: 'POST',
           body: JSON.stringify({message: newMessage}),
           mode: 'cors',
