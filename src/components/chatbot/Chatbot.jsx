@@ -9,6 +9,8 @@ const {LOCAL, PRODUCTION} = API_ENDPOINTS;
 
 const Chatbot = () => {
 
+    const botName = 'Raul AI';
+
     const [messages, setMessages] = useState([{text: [
       'Welcome to Raul AI!',
       'You can ask me a question by typing in the box next to the send button below.'
@@ -63,7 +65,7 @@ const Chatbot = () => {
 
     function handleSendMessage() {
         if (newMessage.trim() !== '') {
-        setMessages([...messages, { text: [newMessage], sender: 'user', loading: false }, { text: ['Raul AI is typing...'], sender: 'bot', loading: true }]);
+        setMessages([...messages, { text: [newMessage], sender: 'user', loading: false }, { text: [`${botName} is typing...`], sender: 'bot', loading: true }]);
         }
     }
 
@@ -75,7 +77,7 @@ const Chatbot = () => {
               <Card className="bg-white">
                   <Card.Header className="bg-primary text-white">
                     <div className="d-flex justify-content-between">
-                      <p className="h3 google-font-600 my-auto">Raul AI</p>
+                      <p className="h3 google-font-600 my-auto">{botName}</p>
                       <p className="h3 google-font-1000 pb-3" style={toggleChatCursorStyle} onClick={handleToggleChat}>_</p>
                     </div>
                   </Card.Header>
