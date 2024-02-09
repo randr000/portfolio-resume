@@ -1,5 +1,5 @@
 import './App.css';
-import { useReducer } from 'react';
+import { useReducer, useEffect } from 'react';
 import AppContext from './context/AppContext';
 import { Col, Row, Container, Image, ButtonGroup, Button } from 'react-bootstrap';
 import { APP_INITIAL_STATE, appReducer } from './reducers/appReducer';
@@ -34,12 +34,68 @@ function App() {
   const sideSectionTitleTheme = 'google-font-800 fs-4 text-center';
   const sideSectionDetailTextTheme = 'google-font-400';
 
-  function handleTechClick() {
-    dispatch({type: TECH});
+  useEffect(() => {
+    // navigate to accounting or tech page depending on page typed in url bar
+    const acctg = [
+      'accounting', 'acctg', 'actg', 'finance', 'accntng', 'acounting',
+      'acouting', 'count', 'cnt', 'acc', 'accg', 'fin', 'fnnc', 'fnce'
+  ];
+    const {page} = getURLparts();
+    if (acctg.includes(page)) handleAccountingClick();
+    else handleTechClick();
+  }, [window.location.pathname]);
+
+
+  /**
+   * Returns the protocol, host, pathname, and page of the url
+   * 
+   * @returns {Object} An object containing the different parts of the url
+   * @returns {string} protocol - A string representing the protocol ex. 'http:' or 'https:'
+   * @returns {string} host - A string representing the hostname of the site.
+   * @returns {Array} path - An array of strings containing the site path after the hostname
+   * @returns {string} page - The current page the site is on. This will always be the last item in the path array.
+   */
+  function getURLparts() {
+    const path = window.location.pathname.split('/');
+    return {
+      protocol: window.location.protocol,
+      host: window.location.host,
+      path: path,
+      page: path[path.length - 1]
+    };
   }
 
+  /**
+   * Generates the new URL string for the site
+   * 
+   * @param {string} page - The page name to display. Should only be 'tech' or 'accounting'.
+   * @returns {void} This function does not return any value.
+   */
+  function generateURL(page) {
+    const {protocol, host, path} = getURLparts();
+    path[path.length - 1] = page;
+    const url = `${protocol}//${host}${path.join('/')}`
+    window.history.replaceState(null, document.title, url);
+  }
+
+  /**
+   * Event handler for when tech button is clicked
+   * 
+   * @returns {void} This function does not return any value
+   */
+  function handleTechClick() {
+    dispatch({type: TECH});
+    generateURL(TECH.toLowerCase());
+  }
+
+  /**
+   * Event handler for when accounting button is clicked
+   * 
+   * @returns {void} This function does not return any value
+   */
   function handleAccountingClick() {
     dispatch({type: ACCOUNTING});
+    generateURL(ACCOUNTING.toLowerCase());
   }
 
   return (
