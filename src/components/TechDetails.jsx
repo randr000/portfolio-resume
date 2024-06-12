@@ -9,7 +9,7 @@ const TechDetails = () => {
     const isSmallScreen = useMediaQuery(smallScreenMaxWidth);
 
     // For some reason I am not able to override bootstrap's default styling for 'hr'.
-    // This is true event when using inline styles.
+    // This is true even when using inline styles.
     // As a workaround, I created an empty div element and applied the following styles to it.
     const hrStyles = {
         border: '.25rem solid #333B4C',
@@ -70,9 +70,8 @@ const TechDetails = () => {
                 />
             </a>
             <p className={pClasses} style={pStyles}>
-                This project is a prototype of a drag and drop data preparation app using python and react.
-                All python code is completely run in the browser using pyodide. This project is still very 
-                much a work in progress. For a more detailed description, please see the 
+                This project allows a user to use a drag and drop interface to create data pipelines with little to no coding knowledge.
+                python is used to modify the data and all python code is completely run in the browser using pyodide. For more details, please see the 
                 project's <a href="https://github.com/randr000/react_pyodide_data_prep" target="_blank">README</a>.
                 <br/>
                 For more information about the pyodide project, please visit <a href="https://pyodide.org/" target="_blank">pyodide.org</a>.
