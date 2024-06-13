@@ -71,7 +71,7 @@ const TechDetails = () => {
             </a>
             <p className={pClasses} style={pStyles}>
                 This project allows a user to use a drag and drop interface to create data pipelines with little to no coding knowledge.
-                python is used to modify the data and all python code is completely run in the browser using pyodide. For more details, please see the 
+                Python is used to modify the data and all python code is completely run in the browser using pyodide. For more details, please see the 
                 project's <a href="https://github.com/randr000/react_pyodide_data_prep" target="_blank">README</a>.
                 <br/>
                 For more information about the pyodide project, please visit <a href="https://pyodide.org/" target="_blank">pyodide.org</a>.
