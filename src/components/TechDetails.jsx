@@ -74,6 +74,8 @@ const TechDetails = () => {
                 Python is used to modify the data and all python code is completely run in the browser using pyodide. For more details, please see the 
                 project's <a href="https://github.com/randr000/react_pyodide_data_prep" target="_blank">README</a>.
                 <br/>
+                The project is featured on the official Pyodide <a href="https://blog.pyodide.org/posts/pyodide-react-pandas-matplotlib-scikit/" target="_blank">blog</a>.
+                <br/>
                 For more information about the pyodide project, please visit <a href="https://pyodide.org/" target="_blank">pyodide.org</a>.
             </p>
 
