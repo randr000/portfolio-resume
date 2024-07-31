@@ -59,7 +59,7 @@ const TechDetails = () => {
 
             <div className={hrClasses} style={hrStyles}></div>
 
-            <h3 className={headerClasses} style={h3Styles}>Pyodide React App</h3>
+            <h3 className={headerClasses} style={h3Styles}>Pyodide Data Prep</h3>
             <a href="https://randr000.github.io/react_pyodide_data_prep/" target="_blank">
                 <Image
                     src={pyodideGif}
