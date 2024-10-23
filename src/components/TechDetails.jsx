@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import { liftlog, pyodideGif } from "../img/images";
+import { liftlog, pyodideGif, taxRagAppChat} from "../img/images";
 import { useMediaQuery } from 'react-responsive';
 import smallScreenMaxWidth from "../smallScreenMaxWidth";
 
@@ -41,8 +41,27 @@ const TechDetails = () => {
 
             <h2 className={headerClasses} style={h2Styles}>Projects</h2>
 
+            <h3 className={headerClasses} style={h3Styles}>Tax RAG App</h3>
+            <a href="https://taxragapp.vercel.app/" target="_blank">
+                <Image
+                    src={taxRagAppChat}
+                    alt="tax rag app site preview picture"
+                    style={projImgStyles}
+                    fluid
+                    thumbnail
+                />
+            </a>
+            <p className={pClasses} style={pStyles}>
+                A chat application that uses RAG (Retrieval Augmented Generation) to query the 2023 IRS Publication 17 to answer any tax questions a user may have.
+                Also allows the user to rate the bot's responses. The users' ratings are saved and then emailed to the site owner.
+                For a more detailed description, please see the 
+                project's <a href="https://github.com/randr000/tax_llm_next_app" target="_blank">README</a>.
+            </p>
+
+            <div className={hrClasses} style={hrStyles}></div>
+
             <h3 className={headerClasses} style={h3Styles}>liftlog</h3>
-            <a href="https://lift-log-react.vercel.app/" target="_blank">
+            <a href="https://taxragapp.vercel.app/" target="_blank">
                 <Image
                     src={liftlog}
                     alt="liftlog site preview picture"

@@ -21,6 +21,7 @@ import MDCLogo from './miami-dade-college.png';
 import ForGeeksLogo from './4geeks-logo.webp';
 import Liftlog from './lift-log.png';
 import PyodideGif from './pyodide.gif';
+import TaxRagAppChat from './taxragapp-chat.png';
 
 export const headshotAccounting = HeadshotAccounting;
 export const linkedInLogo = LinkedInLogo
@@ -45,3 +46,4 @@ export const mdcLogo = MDCLogo;
 export const forGeeksLogo = ForGeeksLogo;
 export const liftlog = Liftlog;
 export const pyodideGif = PyodideGif;
+export const taxRagAppChat = TaxRagAppChat;
