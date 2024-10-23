@@ -22,6 +22,11 @@ import ForGeeksLogo from './4geeks-logo.webp';
 import Liftlog from './lift-log.png';
 import PyodideGif from './pyodide.gif';
 import TaxRagAppChat from './taxragapp-chat.png';
+import ExpressJS from './express-js.svg';
+import FastAPI from './fastapi.svg';
+import HuggingFace from './hugging-face.svg';
+import NextJS from './nextjs.svg';
+import TailwindCSS from './tailwind-css.svg';
 
 export const headshotAccounting = HeadshotAccounting;
 export const linkedInLogo = LinkedInLogo
@@ -47,3 +52,8 @@ export const forGeeksLogo = ForGeeksLogo;
 export const liftlog = Liftlog;
 export const pyodideGif = PyodideGif;
 export const taxRagAppChat = TaxRagAppChat;
+export const expressJS = ExpressJS;
+export const fastAPI = FastAPI;
+export const huggingFace = HuggingFace;
+export const nextJS = NextJS;
+export const tailwindCSS = TailwindCSS;
