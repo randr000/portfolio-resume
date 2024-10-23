@@ -48,10 +48,14 @@ const Chatbot = () => {
             .catch(r => {
               if (i === maxAttempts) {
                 setMessages(state => [...state.slice(0, -1), { text: [
-                  'Hmm...',
-                  "I'm having trouble processing your request right now.",
-                  'Please try again later.',
-                  `If the problem persists, please take a screenshot and send an email to <a href="mailto:${helpEmail}?subject=${botName} No Response">${helpEmail}</a>.`
+                  // 'Hmm...',
+                  // "I'm having trouble processing your request right now.",
+                  // 'Please try again later.',
+                  // `If the problem persists, please take a screenshot and send an email to <a href="mailto:${helpEmail}?subject=${botName} No Response">${helpEmail}</a>.`
+                  'Hello!',
+                  "I'm sorry I can't respond right now, but I am being updated and retrained in order to provide better responses.",
+                  'Please check back again soon.',
+                  `If you would like to see how the old version of me workded, please visit <a href="https://github.com/randr000/my-chatbot-api" target="_blank">here</a>.`
                 ], sender: 'bot', loading: false }]);
               } else console.log(`Attempt ${i + 1} failed.`);
             });
