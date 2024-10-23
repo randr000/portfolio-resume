@@ -55,7 +55,7 @@ const Chatbot = () => {
                   'Hello!',
                   "I'm sorry I can't respond right now, but I am being updated and retrained in order to provide better responses.",
                   'Please check back again soon.',
-                  `If you would like to see how the old version of me workded, please visit <a href="https://github.com/randr000/my-chatbot-api" target="_blank">here</a>.`
+                  `If you would like to see how the old version of me worked, please visit <a href="https://github.com/randr000/my-chatbot-api" target="_blank">here</a>.`
                 ], sender: 'bot', loading: false }]);
               } else console.log(`Attempt ${i + 1} failed.`);
             });
