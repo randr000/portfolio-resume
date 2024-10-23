@@ -60,24 +60,6 @@ const TechDetails = () => {
 
             <div className={hrClasses} style={hrStyles}></div>
 
-            <h3 className={headerClasses} style={h3Styles}>liftlog</h3>
-            <a href="https://taxragapp.vercel.app/" target="_blank">
-                <Image
-                    src={liftlog}
-                    alt="liftlog site preview picture"
-                    style={projImgStyles}
-                    fluid
-                    thumbnail
-                />
-            </a>
-            <p className={pClasses} style={pStyles}>
-                This site allows a user to keep a log of how much weight they are lifting in the gym.
-                For a more detailed description, please see the 
-                project's <a href="https://github.com/randr000/lift-log-react-frontend" target="_blank">README</a>.
-            </p>
-
-            <div className={hrClasses} style={hrStyles}></div>
-
             <h3 className={headerClasses} style={h3Styles}>Pyodide Data Prep</h3>
             <a href="https://randr000.github.io/react_pyodide_data_prep/" target="_blank">
                 <Image
@@ -98,6 +80,23 @@ const TechDetails = () => {
                 For more information about the pyodide project, please visit <a href="https://pyodide.org/" target="_blank">pyodide.org</a>.
             </p>
 
+            <div className={hrClasses} style={hrStyles}></div>
+
+            <h3 className={headerClasses} style={h3Styles}>liftlog</h3>
+            <a href="https://lift-log-react.vercel.app/" target="_blank">
+                <Image
+                    src={liftlog}
+                    alt="liftlog site preview picture"
+                    style={projImgStyles}
+                    fluid
+                    thumbnail
+                />
+            </a>
+            <p className={pClasses} style={pStyles}>
+                This site allows a user to keep a log of how much weight they are lifting in the gym.
+                For a more detailed description, please see the 
+                project's <a href="https://github.com/randr000/lift-log-react-frontend" target="_blank">README</a>.
+            </p>
         </div>
     );
 };
