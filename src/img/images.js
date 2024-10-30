@@ -5,6 +5,7 @@ import AWSCertifiedCloudPractitioner from './aws-certified-cloud-practitioner.pn
 import CPALogo from './cpa.jpg';
 import HTML5Logo from './html5.svg';
 import CSS3Logo from './css-logo.svg';
+import DockerLogo from './docker-logo.svg';
 import JSLogo from './js-logo.svg';
 import BootstrapLogo from './bootstrap-logo.svg.png';
 import ReactLogo from './react-logo.svg';
@@ -35,6 +36,7 @@ export const awsCertifiedCloudPractitioner = AWSCertifiedCloudPractitioner;
 export const cpaLogo = CPALogo;
 export const html5Logo = HTML5Logo;
 export const css3Logo = CSS3Logo;
+export const dockerLogo = DockerLogo;
 export const jsLogo = JSLogo;
 export const bootstrapLogo = BootstrapLogo;
 export const reactLogo = ReactLogo;

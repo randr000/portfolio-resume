@@ -1,6 +1,7 @@
 import React from 'react';
 import HTML5Logo from './HTML5Logo';
 import CSS3Logo from './CSS3Logo';
+import DockerLogo from './DockerLogo';
 import JSLogo from './JSLogo';
 import TailwindCSSLogo from './TailwindCSSLogo';
 import BootstrapLogo from './BootstrapLogo';
@@ -22,6 +23,7 @@ const TechSkills = ({theme}) => {
             <h1 className={theme}>Skills</h1>
             <HTML5Logo/>
             <CSS3Logo/>
+            <DockerLogo/>
             <JSLogo/>
             <TailwindCSSLogo/>
             <BootstrapLogo/>
