@@ -22,7 +22,7 @@ const HeaderInfo = () => {
     return (
         <div>
             <h1 className={classString} style={nameStyles}>
-                {`${name}${accounting ? ', C.P.A' : ''}`}
+                {`${name}${accounting ? ', C.P.A.' : ''}`}
             </h1>
             <h2 className={classString} style={jobTitleStyles}>
                 {tech ? techTitle : accountingTitle}
