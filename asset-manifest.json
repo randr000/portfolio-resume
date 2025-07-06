@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-resume/static/css/main.a3b7d32a.css",
-    "main.js": "/portfolio-resume/static/js/main.aeea270b.js",
+    "main.js": "/portfolio-resume/static/js/main.2745aff1.js",
     "static/js/787.dc9ee2bf.chunk.js": "/portfolio-resume/static/js/787.dc9ee2bf.chunk.js",
     "static/media/pyodide.gif": "/portfolio-resume/static/media/pyodide.59c067eb7331beab7536.gif",
     "static/media/Sql_logo.png": "/portfolio-resume/static/media/Sql_logo.85fb38d6773862e917f4.png",
@@ -12,7 +12,7 @@
     "static/media/vba.png": "/portfolio-resume/static/media/vba.ac0b54c826226b8d245b.png",
     "static/media/taxragapp-chat.png": "/portfolio-resume/static/media/taxragapp-chat.34cb5c6ee20438e190dc.png",
     "static/media/PeopleSoft.png": "/portfolio-resume/static/media/PeopleSoft.0275aa180e07b6c4b1f7.png",
-    "static/media/headshot-accounting.jpg": "/portfolio-resume/static/media/headshot-accounting.d5f60b1ec96019f2a9af.jpg",
+    "static/media/headshot-accounting.jpg": "/portfolio-resume/static/media/headshot-accounting.7160c5b48b3ef69020da.jpg",
     "static/media/cpa.jpg": "/portfolio-resume/static/media/cpa.4bf2bc9506b9b0e41069.jpg",
     "static/media/lift-log.png": "/portfolio-resume/static/media/lift-log.20dee23aadb599720d8b.png",
     "static/media/4geeks-logo.webp": "/portfolio-resume/static/media/4geeks-logo.93e9dd6f67e7ea03a049.webp",
@@ -34,11 +34,11 @@
     "static/media/express-js.svg": "/portfolio-resume/static/media/express-js.13e4b3884f318c648bfe0207aa64c8dc.svg",
     "static/media/docker-logo.svg": "/portfolio-resume/static/media/docker-logo.c510bf4034a4d1d97085e5234d3db1bf.svg",
     "main.a3b7d32a.css.map": "/portfolio-resume/static/css/main.a3b7d32a.css.map",
-    "main.aeea270b.js.map": "/portfolio-resume/static/js/main.aeea270b.js.map",
+    "main.2745aff1.js.map": "/portfolio-resume/static/js/main.2745aff1.js.map",
     "787.dc9ee2bf.chunk.js.map": "/portfolio-resume/static/js/787.dc9ee2bf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a3b7d32a.css",
-    "static/js/main.aeea270b.js"
+    "static/js/main.2745aff1.js"
   ]
 }
